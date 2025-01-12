@@ -1,0 +1,7 @@
+{
+  "name": "gradia",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
