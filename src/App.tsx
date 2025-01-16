@@ -32,22 +32,30 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import React from "react";
+import {UserProvider} from "./context/useAuth";
+import LoginPage from "./pages/LoginPage";
+import PrivateRoute from "./router/PrivateRoute";
+import ChatListPage from "./pages/ChatListPage";
+import ChatPage from "./pages/ChatPage";
+import RegisterPage from "./pages/RegisterPage";
 
 setupIonicReact();
 
 const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
+    <IonApp>
+        <IonReactRouter>
+            <IonRouterOutlet>
+                <UserProvider>
+                    <Route path="/" component={LoginPage} exact={true} />
+                    <Route path="/login" component={LoginPage} exact={true} />
+                    <Route path="/register" component={RegisterPage} exact={true} />
+                    <PrivateRoute path="/chat" component={ChatListPage} exact={true} />
+                    <PrivateRoute path="/chat/:id" component={ChatPage} />
+                </UserProvider>
+            </IonRouterOutlet>
+        </IonReactRouter>
+    </IonApp>
 );
 
 export default App;
