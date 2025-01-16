@@ -1,0 +1,144 @@
+.chat-list-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.chat-list-content .chat-list-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.chat-list-container .list {
+    max-width: 1000px;
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.chat-list-container .list-item {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+
+}
+
+.chat-list-content .item-label {
+    font-size: 1.2em;
+    color: #333;
+    cursor: pointer;
+}
+
+.chat-list-content .item-details {
+    display: flex;
+    flex-direction: row;
+    gap : 10px;
+    color: #575757;
+}
+
+.chat-list-content .chat-type {
+    border: 1px solid #ef9928;
+    border-radius: 4px;
+    padding: 0 4px;
+    color: #bd7616;
+}
+
+.chat-list-content .icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+ion-modal#chat-modal {
+    --border-radius: 4px;
+    --width: 100%;
+    --max-width: 600px;
+    --max-height: 300px;
+    --box-shadow:
+            -20px -20px 120px 0px rgba(255, 131, 131, 0.26), /* Red shadow */
+            40px 40px 120px 0px rgba(237, 201, 23, 0.2); /* Orange shadow */
+}
+
+/* Ensure the modal content takes up full height */
+#chat-modal .modal-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Make the textarea take up the remaining space */
+#chat-modal .full-size-textarea {
+    flex: 1;
+    width: 100%;
+    margin-bottom: 60px; /* Space for the controls at the bottom */
+}
+
+#chat-modal .modal-content textarea {
+    margin: 24px 20px 90px;
+    width: calc(100% - 40px);
+    outline: none;
+    border-color: white;
+    resize: none;
+}
+
+#chat-modal .modal-content textarea:focus {
+    border-color: white;
+    outline: none;
+}
+
+/* Container for the select and button */
+.controls-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between; /* Align items to the edges */
+    align-items: center;
+    padding: 10px;
+    background: white; /* Ensure the controls are visible */
+    border-top: 1px solid #ddd; /* Optional: Add a border for separation */
+}
+
+/* Style the select dropdown */
+.style-select {
+    margin-right: auto; /* Push the select to the left */
+    max-width: 120px;
+    margin-left: 6px;
+}
+
+/* Style the start chat button */
+.start-chat-button {
+    margin-left: auto; /* Push the button to the right */
+}
+
+/* Modal styling */
+ion-modal#paper-modal {
+    --border-radius: 4px;
+    --width: 100%;
+    --max-width: 600px;
+    --max-height: 300px;
+    --box-shadow:
+            40px 40px 120px 0px rgba(255, 131, 131, 0.26), /* Red shadow */
+            -20px -20px 120px 0px rgba(237, 201, 23, 0.2); /* Orange shadow */
+}
+
+/* Ensure the modal content takes up full height */
+#paper-modal .modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 90px); /* Subtract space for the bottom controls */
+    cursor: pointer;
+    border: 2px dashed #ccc; /* Optional: Add a dashed border for visual feedback */
+    margin: 10px;
+    border-radius: 4px;
+}
+
+/* Style for the file name text */
+#paper-modal .file-name {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+}
+
