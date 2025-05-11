@@ -13,4 +13,14 @@ The Gradia frontend is a modern web application built with **React** and **TypeS
 *   Receiving personalized feedback and suggestions for writing improvement.
 *   Managing user accounts and preferences.
 
-This frontend communicates with the [Gradia Backend API]([]) to provide its core functionalities.
+This frontend communicates with the [Gradia Backend API](https://github.com/tudorverzes/GradiaAPI) to provide its core functionalities.
+
+## ✨ Features
+
+*   🔐 **User Authentication**: Secure Login and Registration.
+*   💬 **Interactive Chat Interface**: Engage in natural language conversations with the AI.
+*   📄 **Document Upload & Analysis**: Upload your papers (e.g., `.txt`, `.docx`, `.pdf` - *specify supported formats*) and receive detailed style analysis.
+*   📊 **Personalized Style Feedback**: View AI-generated insights on your writing style, including scores for academic, formal, humorous, and informal tones.
+*   💡 **Improvement Suggestions**: Get actionable tips to enhance your writing.
+*   📱 **Responsive Design**: Optimized for a great experience on both desktop and mobile devices.
+*   📚 **Conversation History**: Review past interactions and analyses.
